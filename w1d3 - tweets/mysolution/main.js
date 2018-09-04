@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   const tweetTemp = document.querySelector(".tweetTemp").content;
   const tweetList = document.querySelector("main");
 
-  fetch("https://kea-alt-del.dk/twitter/api/?hashtag=word&?count=50")
+  fetch("https://kea-alt-del.dk/twitter/api/?hashtag=javascript&?count=60")
     .then(e => e.json())
     .then(showTweets);
 
@@ -17,6 +17,7 @@ window.addEventListener("load", () => {
     const clone = tweetTemp.cloneNode(true);
     clone.querySelector("h1").textContent = aTweet.text;
     clone.querySelector("p").textContent = aTweet.user.screen_name;
+    clone.profile_background_image_url;
     tweetList.appendChild(clone);
   }
 });

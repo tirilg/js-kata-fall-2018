@@ -1,11 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Helvetica, sans-serif;
 }
 
 #products {
   display: flex;
   justify-content: space-around;
+  padding: 3em;
+  text-align: center;
 }
 
 #modal_container {
