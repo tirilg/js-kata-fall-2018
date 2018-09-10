@@ -10,4 +10,4 @@ function randomColor() {
   document.querySelector("div").style.background = bgColor;
 }
 
-setInterval(randomColor, 2000);
+setInterval(randomColor, 2500);
