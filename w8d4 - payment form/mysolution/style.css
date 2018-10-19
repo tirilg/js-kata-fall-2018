@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body {
+  font-family: "raleway", sans-serif;
+  margin: 0;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(40, 232, 189);
+  background: linear-gradient(
+    5deg,
+    rgba(40, 232, 189, 0.9171580188679245) 31%,
+    rgba(130, 203, 218, 0.9008264462809917) 67%
+  );
+}
+
+button {
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+
+form input {
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 1px solid #eee;
+
+  border-radius: 5px;
+  transition: border-color 0.5s ease-out;
+}
+form label {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+form {
+  padding: 1em;
+}
+
+.wrapper {
+  display: grid;
+  grid-template: auto/repeat(4, auto);
+  justify-content: start;
+  width: 300px;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.6);
+
+  border-radius: 5px;
+}
+
+.wrapper > div {
+  display: contents;
+}
+
+.wrapper h1 {
+  grid-column: 1/-1;
+}
+
+input [type="text"] {
+  width: 15em;
+}
+
+.remember {
+  padding-top: 1em;
+  font-size: 0.9em;
+}
+.submit button {
+  grid-column: 1/-1;
+  margin-top: 3em;
+  letter-spacing: 0.1em;
+}
+
+:required + .required::after {
+  color: red;
+  content: "*";
+}
+
+input:valid:not(:placeholder-shown) {
+  border: greenyellow 1px solid;
+}
+input:valid:not(:placeholder-shown) ~ .correct::after {
+  content: "✔️";
+}
+
+input:invalid:not(:placeholder-shown) ~ .correct::after {
+  content: "❌";
+}
+input:invalid:not(:placeholder-shown) {
+  border: red 1px solid;
+}
+
+input:invalid ~ submit button:active {
+  border: red 2px solid;
+}
+
+input:invalid + button:active {
+  color: red;
+}
+
+[type="radio"]:checked + label {
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: all 1s ease;
+}

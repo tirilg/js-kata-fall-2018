@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Payment form</title>
+</head>
+
+<body>
+
+    <div class="background">
+        <form action="index.html" method="POST">
+
+
+            <div class="wrapper">
+
+                <h1>PURCHASE</h1>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="add full name">
+                    <span class="required"></span>
+                    <span class="correct"></span>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="email">
+                    <span class="required"></span>
+                    <span class="correct"></span>
+                </div>
+
+                <div>
+                    <label for="cardnumber">Card number:</label>
+                    <input type="number" id="cardnumber" name="cardnumber" required placeholder="card number" pattern="[0-9]{13,16}">
+                    <span class="required"></span>
+                    <span class="correct"></span>
+                </div>
+
+
+
+                <div class="remember">
+                    <div class="remember">
+                        <input type="checkbox" id="remember" name="remember" required>
+                        <label for="rememberme">Remember me</label>
+                    </div>
+                </div>
+
+
+                <div class="submit">
+                    <button type="submit">CHECKOUT</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+
+</html>
